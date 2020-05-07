@@ -238,4 +238,12 @@ defmodule ExprTest do
     assert Expr.eval!(expr, vars) == result
   end
 
+  test "Eval round" do
+    expr = "round(5.3456, p)"
+    vars = %{"p" => 2}
+    result = [5.35]
+
+    assert Expr.eval!(expr, vars) == result
+  end
+
 end
